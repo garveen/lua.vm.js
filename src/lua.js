@@ -66,19 +66,19 @@ var Lua = exports.Lua = {
 		// arith
 		// atpanic
 		// callk
-		"checkstack":        emscripten.cwrap('lua_checkstack',        null,     ["number", "number"]),
+		"checkstack":        cwrap('lua_checkstack',        null,     ["number", "number"]),
 		// close
 		// compare
 		// concat
 		// copy
-		"createtable":       emscripten.cwrap('lua_createtable',       null,     ["number", "number", "number"]),
+		"createtable":       cwrap('lua_createtable',       null,     ["number", "number", "number"]),
 		// dump
-		"error":             emscripten.cwrap('lua_error',             "number", ["number"]),
-		"gc":                emscripten.cwrap('lua_gc',                "number", ["number", "number", "number"]),
+		"error":             cwrap('lua_error',             "number", ["number"]),
+		"gc":                cwrap('lua_gc',                "number", ["number", "number", "number"]),
 		// getallocf
 		// getctx
-		"getfield":          emscripten.cwrap('lua_getfield',          null,     ["number", "number", "string"]),
-		"getglobal":         emscripten.cwrap('lua_getglobal',         null,     ["number", "string"]),
+		"getfield":          cwrap('lua_getfield',          null,     ["number", "number", "string"]),
+		"getglobal":         cwrap('lua_getglobal',         null,     ["number", "string"]),
 		// gethook
 		// gethookcount
 		// gethookmask
@@ -86,8 +86,8 @@ var Lua = exports.Lua = {
 		// getlocal
 		// getmetatable
 		// getstack
-		"gettable":          emscripten.cwrap('lua_gettable',          null,     ["number", "number"]),
-		"gettop":            emscripten.cwrap('lua_gettop',            "number", ["number"]),
+		"gettable":          cwrap('lua_gettable',          null,     ["number", "number"]),
+		"gettop":            cwrap('lua_gettop',            "number", ["number"]),
 		// getupvalue
 		// getuservalue
 		// insert
@@ -99,55 +99,55 @@ var Lua = exports.Lua = {
 		// load
 		// newstate
 		// newthread
-		"newuserdata":       emscripten.cwrap('lua_newuserdata',       "number", ["number", "number"]),
+		"newuserdata":       cwrap('lua_newuserdata',       "number", ["number", "number"]),
 		// next
-		"pcallk":            emscripten.cwrap('lua_pcallk',            "number", ["number", "number", "number", "number", "number", "number"]),
-		"pushboolean":       emscripten.cwrap('lua_pushboolean',       null,     ["number", "number"]),
-		"pushcclosure":      emscripten.cwrap('lua_pushcclosure',      null,     ["number", "number", "number"]),
+		"pcallk":            cwrap('lua_pcallk',            "number", ["number", "number", "number", "number", "number", "number"]),
+		"pushboolean":       cwrap('lua_pushboolean',       null,     ["number", "number"]),
+		"pushcclosure":      cwrap('lua_pushcclosure',      null,     ["number", "number", "number"]),
 		// pushfstring
 		// pushinteger
-		"pushlightuserdata": emscripten.cwrap('lua_pushlightuserdata', null,     ["number", "number"]),
-		"pushlstring":       emscripten.cwrap('lua_pushlstring',       null,     ["number", "array", "number"]),
-		"pushnil":           emscripten.cwrap('lua_pushnil',           null,     ["number"]),
-		"pushnumber":        emscripten.cwrap('lua_pushnumber',        null,     ["number", "number"]),
+		"pushlightuserdata": cwrap('lua_pushlightuserdata', null,     ["number", "number"]),
+		"pushlstring":       cwrap('lua_pushlstring',       null,     ["number", "array", "number"]),
+		"pushnil":           cwrap('lua_pushnil',           null,     ["number"]),
+		"pushnumber":        cwrap('lua_pushnumber',        null,     ["number", "number"]),
 		// pushstring
 		// pushthread
 		// pushunsigned
-		"pushvalue":         emscripten.cwrap('lua_pushvalue',         null,     ["number", "number"]),
+		"pushvalue":         cwrap('lua_pushvalue',         null,     ["number", "number"]),
 		// pushvfstring
 		// rawequal
 		// rawget
-		"rawgeti":           emscripten.cwrap('lua_rawgeti',           null,     ["number", "number", "number"]),
+		"rawgeti":           cwrap('lua_rawgeti',           null,     ["number", "number", "number"]),
 		// rawgetp
 		// rawlen
 		// rawset
 		// rawseti
 		// rawsetp
-		"remove":            emscripten.cwrap('lua_remove',            null,     ["number", "number"]),
+		"remove":            cwrap('lua_remove',            null,     ["number", "number"]),
 		// replace
 		// resume
 		// setallocf
-		"setfield":          emscripten.cwrap('lua_setfield',          null,     ["number", "number", "string"]),
-		"setglobal":         emscripten.cwrap('lua_setglobal',         null,     ["number", "string"]),
+		"setfield":          cwrap('lua_setfield',          null,     ["number", "number", "string"]),
+		"setglobal":         cwrap('lua_setglobal',         null,     ["number", "string"]),
 		// sethook
 		// setlocal
-		"setmetatable":      emscripten.cwrap('lua_setmetatable',      null,     ["number", "number"]),
-		"settable":          emscripten.cwrap('lua_settable',          null,     ["number", "number"]),
-		"settop":            emscripten.cwrap('lua_settop',            null,     ["number", "number"]),
+		"setmetatable":      cwrap('lua_setmetatable',      null,     ["number", "number"]),
+		"settable":          cwrap('lua_settable',          null,     ["number", "number"]),
+		"settop":            cwrap('lua_settop',            null,     ["number", "number"]),
 		// setupvalue
 		// setuservalue
 		// status
-		"toboolean":         emscripten.cwrap('lua_toboolean',         "number", ["number", "number"]),
+		"toboolean":         cwrap('lua_toboolean',         "number", ["number", "number"]),
 		// tocfunction
 		// tointegerx
-		"tolstring":         emscripten.cwrap('lua_tolstring',         "number", ["number", "number", "number"]),
-		"tonumberx":         emscripten.cwrap('lua_tonumberx',         "number", ["number", "number", "number"]),
+		"tolstring":         cwrap('lua_tolstring',         "number", ["number", "number", "number"]),
+		"tonumberx":         cwrap('lua_tonumberx',         "number", ["number", "number", "number"]),
 		// topointer
-		"tothread":          emscripten.cwrap('lua_tothread',          "number", ["number", "number"]),
+		"tothread":          cwrap('lua_tothread',          "number", ["number", "number"]),
 		// tounsignedx
-		"touserdata":        emscripten.cwrap('lua_touserdata',        "number", ["number", "number"]),
-		"type":              emscripten.cwrap('lua_type',              "number", ["number", "number"]),
-		"typename":          emscripten.cwrap('lua_typename',          "string", ["number", "number"]),
+		"touserdata":        cwrap('lua_touserdata',        "number", ["number", "number"]),
+		"type":              cwrap('lua_type',              "number", ["number", "number"]),
+		"typename":          cwrap('lua_typename',          "string", ["number", "number"]),
 		// upvalueid
 		// upvaluejoin
 		// version
@@ -169,7 +169,7 @@ var Lua = exports.Lua = {
 		// checkoption
 		// checkstack
 		// checktype
-		"checkudata":        emscripten.cwrap('luaL_checkudata',       "number", ["number", "number", "string"]),
+		"checkudata":        cwrap('luaL_checkudata',       "number", ["number", "number", "string"]),
 		// checkunsigned
 		// error
 		// execresult
@@ -178,12 +178,12 @@ var Lua = exports.Lua = {
 		// getsubtable
 		// gsub
 		// len
-		"loadbufferx":       emscripten.cwrap('luaL_loadbufferx',      "number", ["number", "array", "number", "string", "string"]),
+		"loadbufferx":       cwrap('luaL_loadbufferx',      "number", ["number", "array", "number", "string", "string"]),
 		// loadfilex
 		// loadstring
-		"newmetatable":      emscripten.cwrap('luaL_newmetatable',     "number", ["number", "string"]),
-		"newstate":          emscripten.cwrap('luaL_newstate',         "number", []),
-		"openlibs":          emscripten.cwrap('luaL_openlibs',         null,     ["number"]),
+		"newmetatable":      cwrap('luaL_newmetatable',     "number", ["number", "string"]),
+		"newstate":          cwrap('luaL_newstate',         "number", []),
+		"openlibs":          cwrap('luaL_openlibs',         null,     ["number"]),
 		// optinteger
 		// optlstring
 		// optnumber
@@ -191,14 +191,14 @@ var Lua = exports.Lua = {
 		// prepbuffsize
 		// pushresult
 		// pushresultsize
-		"ref":               emscripten.cwrap('luaL_ref',              "number", ["number", "number"]),
+		"ref":               cwrap('luaL_ref',              "number", ["number", "number"]),
 		// requiref
 		// setfuncs
-		"setmetatable":      emscripten.cwrap('luaL_setmetatable',     null,     ["number", "string"]),
-		"testudata":         emscripten.cwrap('luaL_testudata',        "number", ["number", "number", "string"]),
-		"tolstring":         emscripten.cwrap('luaL_tolstring',        "number", ["number", "number", "number"]),
-		"traceback":         emscripten.cwrap('luaL_traceback',        null,     ["number", "number", "string", "number"]),
-		"unref":             emscripten.cwrap('luaL_unref',            "number", ["number", "number", "number"]),
+		"setmetatable":      cwrap('luaL_setmetatable',     null,     ["number", "string"]),
+		"testudata":         cwrap('luaL_testudata',        "number", ["number", "number", "string"]),
+		"tolstring":         cwrap('luaL_tolstring',        "number", ["number", "number", "number"]),
+		"traceback":         cwrap('luaL_traceback',        null,     ["number", "number", "string", "number"]),
+		"unref":             cwrap('luaL_unref',            "number", ["number", "number", "number"]),
 		// where
 	},
 	"refs": {}, /* indexed by state */
@@ -215,17 +215,17 @@ Lua.Error.prototype = new Error();
 Lua.Error.prototype.name = "Lua.Error";
 
 Lua.cfuncs = {
-	"__gc": emscripten.Runtime.addFunction(function(L){
+	__gc: addFunction(function(L){
 		L = new Lua.State(L);
 		var box = L.checkudata(1, "_PROXY_MT");
-		var id = emscripten.getValue(box, "double");
+		var id = getValue(box, "double");
 		delete Lua.refs[getmain(L)][id];
 		return 0;
 	}),
-	"__index": emscripten.Runtime.addFunction(function(L){
+	__index: addFunction(function(L){
 		L = new Lua.State(L);
 		var box = L.checkudata(1, "_PROXY_MT");
-		var id = emscripten.getValue(box, "double");
+		var id = getValue(box, "double");
 		var ob = Lua.refs[getmain(L)][id];
 		var k = L.lua_to_js(2);
 		try {
@@ -238,10 +238,10 @@ Lua.cfuncs = {
 		L.push(res);
 		return 1;
 	}),
-	"__newindex": emscripten.Runtime.addFunction(function(L){
+	__newindex: addFunction(function(L){
 		L = new Lua.State(L);
 		var box = L.checkudata(1, "_PROXY_MT");
-		var id = emscripten.getValue(box, "double");
+		var id = getValue(box, "double");
 		var ob = Lua.refs[getmain(L)][id];
 		var k = L.lua_to_js(2);
 		if (L.isnil(3)) {
@@ -264,10 +264,10 @@ Lua.cfuncs = {
 		}
 		return 0;
 	}),
-	"__call": emscripten.Runtime.addFunction(function(L){
+	__call: addFunction(function(L){
 		L = new Lua.State(L);
 		var box = L.checkudata(1, "_PROXY_MT");
-		var id = emscripten.getValue(box, "double");
+		var id = getValue(box, "double");
 		var ob = Lua.refs[getmain(L)][id];
 		var top = L.gettop();
 		var thisarg = top>=2?L.lua_to_js(2):null;
@@ -285,26 +285,26 @@ Lua.cfuncs = {
 		L.push(res);
 		return 1;
 	}),
-	"__len": emscripten.Runtime.addFunction(function(L){
+	__len: addFunction(function(L){
 		L = new Lua.State(L);
 		var box = L.checkudata(1, "_PROXY_MT");
-		var id = emscripten.getValue(box, "double");
+		var id = getValue(box, "double");
 		var ob = Lua.refs[getmain(L)][id];
 		L.push(ob.length);
 		return 1;
 	}),
-	"__tostring": emscripten.Runtime.addFunction(function(L){
+	__tostring: addFunction(function(L){
 		L = new Lua.State(L);
 		var box = L.checkudata(1, "_PROXY_MT");
-		var id = emscripten.getValue(box, "double");
+		var id = getValue(box, "double");
 		var ob = Lua.refs[getmain(L)][id];
 		L.pushstring((ob!==null && ob.toString)?ob.toString():typeof ob);
 		return 1;
 	}),
-	"new": emscripten.Runtime.addFunction(function(L){
+	"new": addFunction(function(L){
 		L = new Lua.State(L);
 		var box = L.checkudata(1, "_PROXY_MT");
-		var id = emscripten.getValue(box, "double");
+		var id = getValue(box, "double");
 		var ob = Lua.refs[getmain(L)][id];
 		var top = L.gettop();
 		var args = [];
@@ -321,17 +321,17 @@ Lua.cfuncs = {
 		L.push(res);
 		return 1;
 	}),
-	// "delete": emscripten.Runtime.addFunction(function(L){
+	// "delete": addFunction(function(L){
 	// 	L = new Lua.State(L);
 	// 	var box = L.checkudata(1, "_PROXY_MT");
-	// 	var id = emscripten.getValue(box, "double");
+	// 	var id = getValue(box, "double");
 	// 	var ob = Lua.refs[getmain(L)][id];
 	// 	var k = L.lua_to_js(2);
 	// 	L.pushboolean(delete ob[k]);
 	// 	return 1;
 	// }),
 	// Our error handler
-	"traceback": emscripten.Runtime.addFunction(function(L){
+	traceback: addFunction(function(L){
 		L = new Lua.State(L);
 		L.pushjs(new Lua.Error(L, 1));
 		return 1;
@@ -447,20 +447,20 @@ Lua.State.prototype.printStack = function() {
 };
 // Add handy wrappers to make for idiomatic js
 Lua.State.prototype.pushstring = function (str) {
-	var chars = emscripten.intArrayFromString(str, true);
+	var chars = intArrayFromString(str, true);
 	this.pushlstring(chars, chars.length);
 };
 Lua.State.prototype.raw_tostring = function(i) {
-	var l = emscripten.allocate(4, "i32", emscripten.ALLOC_STACK);
+	var l = allocate(4, "i32", ALLOC_STACK);
 	var p = Lua.lib.tolstring(this._L, i || -1, l);
 	if (p === 0 /* NULL */) return null;
-	return emscripten.Pointer_stringify(p, emscripten.getValue(l, "i32"));
+	return Pointer_stringify(p, getValue(l, "i32"));
 };
 // This version calls __tostring metamethod
 Lua.State.prototype.tostring = function(i) {
-	var l = emscripten.allocate(4, "i32", emscripten.ALLOC_STACK);
+	var l = allocate(4, "i32", ALLOC_STACK);
 	var p = this.tolstring(i || -1, l);
-	return emscripten.Pointer_stringify(p, emscripten.getValue(l, "i32"));
+	return Pointer_stringify(p, getValue(l, "i32"));
 };
 Lua.State.prototype.lua_to_js = function(i) {
 	switch(this.type(i)) {
@@ -478,7 +478,7 @@ Lua.State.prototype.lua_to_js = function(i) {
 		case 7: // LUA_TUSERDATA
 			var box = this.testudata(i, "_PROXY_MT");
 			if (box !== /* NULL */ 0) {
-				var id = emscripten.getValue(box, "double");
+				var id = getValue(box, "double");
 				return Lua.refs[getmain(this)][id];
 			}
 			/* fall through */
@@ -504,7 +504,7 @@ Lua.State.prototype.pushjs = function(ob) {
 	i = refs.i++;
 	refs[i] = ob;
 	var box = this.newuserdata(8);
-	emscripten.setValue(box, i, "double");
+	setValue(box, i, "double");
 	this.setmetatable("_PROXY_MT");
 	// Save in lua table
 	this.getfield(Lua.defines.REGISTRYINDEX, "wrapped");
@@ -542,7 +542,7 @@ Lua.State.prototype.push = function(ob) {
 	}
 };
 Lua.State.prototype.load = function(code, name, mode) {
-	var chars = emscripten.intArrayFromString(code, true);
+	var chars = intArrayFromString(code, true);
 	if (this.loadbufferx(chars, chars.length, name, mode) !== 0) {
 		throw new Lua.Error(this, -1);
 	}
@@ -670,7 +670,6 @@ Lua.executeScripts = function(L) {
 		L.execute(tag.innerHTML);
 	});
 };
-if (!emscripten.noInitialRun) Lua.init();
 
 return Lua;
 })(exports,

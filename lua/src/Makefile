@@ -111,11 +111,12 @@ emscripten:
 		CC="$(shell em-config EMCC)" \
 		AR="$(shell em-config EMAR) rcu" \
 		RANLIB="$(shell em-config EMRANLIB)" \
-		SYSLDFLAGS="-Os \
+		SYSLDFLAGS="-Oz \
 			-s INVOKE_RUN=0 \
 			-s NO_EXIT_RUNTIME=1 \
-			-s TOTAL_MEMORY=134217728 \
 			-s RESERVED_FUNCTION_POINTERS=8 \
+			-s DISABLE_EXCEPTION_CATCHING=1 \
+			-s ALLOW_MEMORY_GROWTH=1 \
 			--memory-init-file 0 \
 			--post-js ../../src/lua.js \
 			--embed-file ../../src/js.lua@js.lua \
