@@ -117,9 +117,9 @@ emscripten:
 			-s RESERVED_FUNCTION_POINTERS=8 \
 			-s DISABLE_EXCEPTION_CATCHING=1 \
 			-s ALLOW_MEMORY_GROWTH=1 \
+			-s NO_FILESYSTEM=1 \
 			--memory-init-file 0 \
 			--post-js ../../src/lua.js \
-			--embed-file ../../src/js.lua@js.lua \
 			"
 
 freebsd:
